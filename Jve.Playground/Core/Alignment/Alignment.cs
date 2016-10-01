@@ -18,17 +18,17 @@ namespace Core.Alignment
 
         public int Evaluate(string x, string y)
         {
-            if(x == null || y == null) throw new NullReferenceException();
+            if (x == null || y == null) throw new NullReferenceException();
             if (string.IsNullOrEmpty(x)) return y.Length * _delta;
             if (string.IsNullOrEmpty(y)) return x.Length * _delta;
 
             var memory = new int[x.Length + 1, y.Length + 1];
 
             for (var i = 1; i <= x.Length; i++)
-                memory[i, 0] = _delta;
+                memory[i, 0] = memory[i - 1, 0] + _delta;
 
             for (var j = 1; j <= y.Length; j++)
-                memory[0, j] = _delta;
+                memory[0, j] = memory[0, j - 1] + _delta;
 
             return RouteIterative(memory, x, y);
         }

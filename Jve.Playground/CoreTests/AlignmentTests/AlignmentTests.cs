@@ -56,5 +56,17 @@ namespace CoreTests.AlignmentTests
 
             Assert.AreEqual(-4, result);
         }
+
+        [TestMethod]
+        public void LongUnevenTest()
+        {
+            const string string1 = "test";
+            const string string2 = "tsettesttset";
+            var sut = new Alignment(Simple.Alpha, Simple.Delta, Simple.Max);
+
+            var result = sut.Evaluate(string1, string2);
+
+            Assert.AreEqual(-4, result);
+        }
     }
 }
