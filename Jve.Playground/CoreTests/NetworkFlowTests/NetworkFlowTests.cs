@@ -88,7 +88,7 @@ namespace CoreTests.NetworkFlowTests
             output.Flow["S -> V"].ShouldBe(20);
             output.Flow["S -> U"].ShouldBe(10);
             output.Flow["V -> U"].ShouldBe(10);
-            output.Flow["V -> T"].ShouldBe(20);
+            output.Flow["V -> T"].ShouldBe(10);
             output.Flow["U -> T"].ShouldBe(20);
         }
     }
