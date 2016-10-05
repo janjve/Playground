@@ -12,9 +12,14 @@ namespace Core.NetworkFlow
 
         public Graph GenerateResidualGraph()
         {
-            // TODO
-            return new Graph();
+            throw new NotImplementedException();
         }
+
+        public List<Edge> GetEdges()
+        {
+            return Vertices.SelectMany(x => x.AdjacencyList).ToList();
+        }
+
         public IEnumerable<string> GetAdjacencyList()
         {
             return Vertices.Select(x => x.ToString());
@@ -61,7 +66,7 @@ namespace Core.NetworkFlow
 
         public override string ToString()
         {
-            return $"{Id} -> {string.Join(", ", AdjacencyList)}";
+            return $"{Id} -> ({string.Join(", ", AdjacencyList)})";
         }
     }
 }
