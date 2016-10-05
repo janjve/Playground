@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="Alignment\Alignment.cs" />
     <Compile Include="Alignment\StepAlignmentConfiguration.cs" />
-    <Compile Include="NetworkFlow\Graph.cs" />
+    <Compile Include="NetworkFlow\DataStructures\Edge.cs" />
+    <Compile Include="NetworkFlow\DataStructures\Graph.cs" />
+    <Compile Include="NetworkFlow\DataStructures\Vertex.cs" />
     <Compile Include="NetworkFlow\NetworkFlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

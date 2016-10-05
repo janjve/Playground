@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.NetworkFlow.DataStructures;
 
 namespace Core.NetworkFlow
 {
@@ -19,16 +20,10 @@ namespace Core.NetworkFlow
             var f = g.GetEdges().ToDictionary(x => x, x => 0);
             var v = FlowValue(f);
 
+            // TODO: Network flow algorithm.
 
-
-            return new NetworkFlowSummary
-            {
-                Flow = new Dictionary<string, int>
-                {
-                    { "dummyS -> dummyT", 10 }
-                },
-                FlowValue = 10
-            };
+            // Dummy
+            return new NetworkFlowSummary { Flow = new Dictionary<string, int> { { "dummyS -> dummyT", 10 } }, FlowValue = 10 };
         }
 
         private static int FlowValue(Dictionary<Edge, int> flow)
