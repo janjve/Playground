@@ -42,8 +42,11 @@
   <ItemGroup>
     <Compile Include="Alignment\Alignment.cs" />
     <Compile Include="Alignment\StepAlignmentConfiguration.cs" />
+    <Compile Include="NetworkFlow\Graph.cs" />
+    <Compile Include="NetworkFlow\NetworkFlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
