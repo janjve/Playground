@@ -10,6 +10,7 @@ namespace Core.NetworkFlow.DataStructures
     {
         public Vertex Target { get; set; }
         public int Capacity { get; set; }
+        public int Flow { get; set; }
 
         public Edge(Vertex target, int capacity)
         {
@@ -20,6 +21,11 @@ namespace Core.NetworkFlow.DataStructures
         public static Edge To(Vertex target, int capacity)
         {
             return new Edge(target, capacity);
+        }
+
+        public bool IsFullCapacity()
+        {
+            return Capacity <= Flow;
         }
 
         public override string ToString()

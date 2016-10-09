@@ -46,6 +46,7 @@
     <Compile Include="NetworkFlow\DataStructures\Graph.cs" />
     <Compile Include="NetworkFlow\DataStructures\Vertex.cs" />
     <Compile Include="NetworkFlow\NetworkFlow.cs" />
+    <Compile Include="NetworkFlow\NetworkFlowSummary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

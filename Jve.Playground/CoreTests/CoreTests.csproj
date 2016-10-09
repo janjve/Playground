@@ -55,6 +55,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AlignmentTests\AlignmentTests.cs" />
+    <Compile Include="NetworkFlowTests\GraphTests.cs" />
     <Compile Include="NetworkFlowTests\NetworkFlowTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -31,6 +31,19 @@ namespace Core.NetworkFlow
             return flow.Where((k, v) => k.Key.Target.Id.Equals(TargetId)).Sum(kv => kv.Value);
         }
 
+        public static List<Edge> FindPath(Vertex from, string targetId)
+        {
+            var targetEdge = from.AdjacencyList.SingleOrDefault(x => x.Target.Id.Equals(targetId));
+            if (targetEdge != null) return new List<Edge> { targetEdge };
+
+            foreach (var e in from.AdjacencyList.Where(x => x.IsFullCapacity()))
+            {
+                FindPath(e.Target)
+            }
+
+            return null;
+        }
+
         // Should be moved and improved.
         private static bool ValidateGraph(Graph g)
         {
@@ -49,11 +62,5 @@ namespace Core.NetworkFlow
             if (!foundTap || !foundSource) throw new InvalidOperationException("Missing source or tap");
             return true;
         }
-    }
-
-    public class NetworkFlowSummary
-    {
-        public Dictionary<string, int> Flow { get; set; }
-        public int FlowValue { get; set; }
     }
 }

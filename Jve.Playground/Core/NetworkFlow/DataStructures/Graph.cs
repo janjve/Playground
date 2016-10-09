@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace Core.NetworkFlow.DataStructures
 {
+    public interface IGraph
+    {
+        Graph GenerateResidualGraph();
+        List<Edge> FindPath(string from, string to);
+        void AugmentGraph(int flow, int capacity, List<Edge> path);
+    }
+
     public class Graph
     {
-        public List<Vertex> Vertices{ get; set; }
+        public List<Vertex> Vertices { get; set; }
 
         public Graph GenerateResidualGraph()
         {

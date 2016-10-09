@@ -14,35 +14,6 @@ namespace CoreTests.NetworkFlowTests
     public class NetworkFlowTests
     {
         [TestMethod]
-        public void GraphInitializeTest()
-        {
-            // Define nodes
-            var nodeT = new Vertex("T");
-            var nodeY = new Vertex("Y");
-            var nodeU = new Vertex("U");
-            var nodeV = new Vertex("V");
-            var nodeS = new Vertex("S");
-
-            // Define edges
-            var graphNodes = new List<Vertex> {
-                nodeS
-                    .With(Edge.To(nodeV, 20))
-                    .With(Edge.To(nodeU, 10)),
-                nodeV
-                    .With(Edge.To(nodeU, 30)),
-                nodeU
-                    .With(Edge.To(nodeY, 20)),
-                nodeY
-                    .With(Edge.To(nodeV, 20))
-                    .With(Edge.To(nodeT, 20)),
-                nodeT
-            };
-            var g1 = new Graph { Vertices = graphNodes };
-
-            g1.GetAdjacencyList().ToList().ForEach(Console.WriteLine);
-        }
-
-        [TestMethod]
         public void NetworkFlowTest()
         {
             // Define nodes
