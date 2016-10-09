@@ -8,19 +8,17 @@ namespace Core.NetworkFlow.DataStructures
 {
     public class Edge
     {
-        public Vertex Target { get; set; }
+        public string Target { get; set; }
+        public string Source { get; set; }
         public int Capacity { get; set; }
         public int Flow { get; set; }
 
-        public Edge(Vertex target, int capacity)
+        public Edge(string source, string target, int capacity)
         {
+            this.Source = source;
             this.Target = target;
             this.Capacity = capacity;
-        }
-
-        public static Edge To(Vertex target, int capacity)
-        {
-            return new Edge(target, capacity);
+            this.Flow = 0;
         }
 
         public bool IsFullCapacity()
@@ -30,7 +28,7 @@ namespace Core.NetworkFlow.DataStructures
 
         public override string ToString()
         {
-            return $"[{Target.Id}:{Capacity}]";
+            return $"[({Source} -> {Target}):{Capacity}]";
         }
     }
 }

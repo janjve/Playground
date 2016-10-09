@@ -14,8 +14,6 @@ namespace Core.NetworkFlow
 
         public static NetworkFlowSummary Run(Graph g)
         {
-            if (!ValidateGraph(g)) throw new InvalidOperationException("Invalid graph");
-
             // Initial flow with throughput 0 on all edges.
             var f = g.GetEdges().ToDictionary(x => x, x => 0);
             var v = FlowValue(f);
@@ -28,39 +26,7 @@ namespace Core.NetworkFlow
 
         private static int FlowValue(Dictionary<Edge, int> flow)
         {
-            return flow.Where((k, v) => k.Key.Target.Id.Equals(TargetId)).Sum(kv => kv.Value);
-        }
-
-        public static List<Edge> FindPath(Vertex from, string targetId)
-        {
-            var targetEdge = from.AdjacencyList.SingleOrDefault(x => x.Target.Id.Equals(targetId));
-            if (targetEdge != null) return new List<Edge> { targetEdge };
-
-            foreach (var e in from.AdjacencyList.Where(x => x.IsFullCapacity()))
-            {
-                FindPath(e.Target)
-            }
-
-            return null;
-        }
-
-        // Should be moved and improved.
-        private static bool ValidateGraph(Graph g)
-        {
-            var foundTap = false;
-            var foundSource = false;
-
-            foreach (var v in g.Vertices)
-            {
-
-                if (!foundSource) foundSource = v.Id.Equals(SourceId);
-                else if (v.Id.Equals(SourceId)) throw new InvalidOperationException("Found double source");
-
-                if (!foundTap) foundTap = v.Id.Equals(SourceId);
-                else if (v.Id.Equals(foundTap)) throw new InvalidOperationException("Found double tap");
-            }
-            if (!foundTap || !foundSource) throw new InvalidOperationException("Missing source or tap");
-            return true;
+            return flow.Where((k, v) => k.Key.Target.Equals(TargetId)).Sum(kv => kv.Value);
         }
     }
 }

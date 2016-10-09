@@ -13,84 +13,41 @@ namespace CoreTests.NetworkFlowTests
     public class GraphTests
     {
         [TestMethod]
-        public void GraphInitializeTest()
+        public void Test2()
         {
             // Define nodes
-            var nodeS = new Vertex("S");
-            var nodeT = new Vertex("T");
-            
+            var S = "S";
+            var V = "V";
+            var U = "U";
+            var T = "T";
 
             // Define edges
-            var graphNodes = new List<Vertex> {
-                nodeS
-                    .With(Edge.To(nodeT, 20)),
-                nodeT
-            };
-            var g1 = new Graph { Vertices = graphNodes };
+            var g = new Graph()
+                .WithEdge(from: S, to: V, capacity: 10)
+                .WithEdge(from: S, to: U, capacity: 20)
+                .WithEdge(from: V, to: U, capacity: 30)
+                .WithEdge(from: V, to: T, capacity: 10)
+                .WithEdge(from: U, to: T, capacity: 20)
+                ;
 
-            g1.GetAdjacencyList().ToList().ForEach(Console.WriteLine);
+            // Pre sanity check
+            g.Edges.ForEach(Console.WriteLine);
+
+            var path = g.FindPath("S", "T");
+            Console.WriteLine($"result: {path.Count}");
+            path.ForEach(Console.WriteLine);
         }
 
         [TestMethod]
         public void FindPathTest()
         {
-            // Define nodes
-            var nodeT = new Vertex("T");
-            var nodeU = new Vertex("U");
-            var nodeV = new Vertex("V");
-            var nodeS = new Vertex("S");
-
-            // Define edges
-            var graphNodes = new List<Vertex> {
-                nodeS
-                    .With(Edge.To(nodeV, 20))
-                    .With(Edge.To(nodeU, 10)),
-                nodeV
-                    .With(Edge.To(nodeT, 10))
-                    .With(Edge.To(nodeU, 30)),
-                nodeU
-                    .With(Edge.To(nodeT, 20)),                    
-                nodeT
-            };
-            var g1 = new Graph { Vertices = graphNodes };
-
-            g1.GetAdjacencyList().ToList().ForEach(Console.WriteLine);
-
-            var path = g1.FindPath(nodeS, "T");
-
-            path.Count.ShouldBe(2);
-            var targetIds = path.Select(x => x.Target.Id);
-            targetIds.ShouldContain("V");
-            targetIds.ShouldContain("T");
+            // TODO
         }
 
         [TestMethod]
         public void FindPathInCyclicTest()
         {
-            // Define nodes
-            var nodeT = new Vertex("T");
-            var nodeY = new Vertex("Y");
-            var nodeU = new Vertex("U");
-            var nodeV = new Vertex("V");
-            var nodeS = new Vertex("S");
-
-            // Define edges
-            var graphNodes = new List<Vertex> {
-                nodeS
-                    .With(Edge.To(nodeV, 20))
-                    .With(Edge.To(nodeU, 10)),
-                nodeV
-                    .With(Edge.To(nodeU, 30)),
-                nodeU
-                    .With(Edge.To(nodeY, 20)),
-                nodeY
-                    .With(Edge.To(nodeV, 20))
-                    .With(Edge.To(nodeT, 20)),
-                nodeT
-            };
-            var g1 = new Graph { Vertices = graphNodes };
-
-            g1.GetAdjacencyList().ToList().ForEach(Console.WriteLine);
+            // TODO
         }
     }
 }

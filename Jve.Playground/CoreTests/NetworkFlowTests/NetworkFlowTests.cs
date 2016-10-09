@@ -17,29 +17,22 @@ namespace CoreTests.NetworkFlowTests
         public void NetworkFlowTest()
         {
             // Define nodes
-            var nodeS = new Vertex(NetworkFlow.SourceId);
-            var nodeV = new Vertex("V");
-            var nodeU = new Vertex("U");
-            var nodeT = new Vertex(NetworkFlow.TargetId);
+            var S = "S";
+            var V = "V";
+            var U = "U";
+            var T = "T";
 
             // Define edges
-            var g = new Graph
-            {
-                Vertices = new List<Vertex> {
-                    nodeS
-                        .With(Edge.To(nodeV, 20))
-                        .With(Edge.To(nodeU, 10)),
-                    nodeV
-                        .With(Edge.To(nodeU, 30))
-                        .With(Edge.To(nodeT, 10)),
-                    nodeU
-                        .With(Edge.To(nodeT, 20)),
-                    nodeT
-                }
-            };
+            var g = new Graph()
+                .WithEdge(from: S, to: V, capacity: 10)
+                .WithEdge(from: S, to: U, capacity: 20)
+                .WithEdge(from: V, to: U, capacity: 30)
+                .WithEdge(from: V, to: T, capacity: 10)
+                .WithEdge(from: U, to: T, capacity: 20)
+                ;
 
             // Pre sanity check
-            g.GetAdjacencyList().ToList().ForEach(x => Console.WriteLine($"[IN] {x}"));
+            g.Edges.ForEach(x => Console.WriteLine($"[IN] {x}"));
 
             var output = NetworkFlow.Run(g);
 
