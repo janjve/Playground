@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{194CF03B-E8A4-4519-85CC-07FA3AC73B55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTests", "CoreTests\CoreTests.csproj", "{9EC60FE0-6586-4C61-97CB-65AC327292D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfsAdministrationTool-Web", "TfsAdministrationTool-Web\TfsAdministrationTool-Web.csproj", "{76F11C3E-5094-4EE3-8310-29E5D809ED4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,22 @@ Global
 		{9EC60FE0-6586-4C61-97CB-65AC327292D9}.Release|x64.Build.0 = Release|Any CPU
 		{9EC60FE0-6586-4C61-97CB-65AC327292D9}.Release|x86.ActiveCfg = Release|Any CPU
 		{9EC60FE0-6586-4C61-97CB-65AC327292D9}.Release|x86.Build.0 = Release|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Debug|x64.Build.0 = Debug|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Debug|x86.Build.0 = Debug|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Release|ARM.Build.0 = Release|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Release|x64.ActiveCfg = Release|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Release|x64.Build.0 = Release|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Release|x86.ActiveCfg = Release|Any CPU
+		{76F11C3E-5094-4EE3-8310-29E5D809ED4E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

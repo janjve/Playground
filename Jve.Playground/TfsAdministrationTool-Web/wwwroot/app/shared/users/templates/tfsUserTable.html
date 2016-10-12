@@ -1,0 +1,18 @@
+﻿<md-data-table-container>
+    <table md-data-table class="md-primary" md-progress="deferred">
+        <thead>
+            <tr>
+                <th name="name"></th>
+                <!--<th ng-repeat="role in vm.roles" name="{{role}}"></th>-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr md-auto-select ng-repeat="user in vm.users">
+                <td>{{user}}</td>
+                <!--<td ng-repeat="role in user.roles">
+                    <md-checkbox aria-label="Closed" class="md-primary" ng-model="role.access" ng-change="vm.onAccessChange({user: user})"></md-checkbox>
+                </td>-->
+            </tr>
+        </tbody>
+    </table>
+</md-data-table-container>

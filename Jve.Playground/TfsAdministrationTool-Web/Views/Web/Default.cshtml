@@ -1,0 +1,22 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="mainController as vm">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+
+    @Styles.Render("~/bundles/bower_style")
+    @Styles.Render("~/bundles/app_style")
+
+</head>
+<body>
+    <top-menu ng-cloak></top-menu>
+    <div class="md-padding" layout="row">
+        <div flex-offset="10" flex="80" ui-view ng-cloak class="body-content"></div>
+    </div>
+    @Scripts.Render("~/bundles/bower_script")
+    @Scripts.Render("~/bundles/app_script")
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    /*padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color:lightgray*/
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+/*Initial workaround for angular-material. Without this md-scroll-mask will block the whole screen when using UI Router to navigate.*/
+.md-scroll-mask {
+    position: initial;
+}
+
+.highlight{
+    font-weight:bold;
+    color:black!important; 
+}

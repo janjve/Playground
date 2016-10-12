@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "name": "TfsAdministrationTool-Web",
+  "author": "Jan Vium Enghoff",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "angular": "~1.5.8",
+    "angular-ui-router": "~0.2.15",
+    "angular-material": "~1.1.1",
+    "format": "~1.0.1",
+    "lodash": "~4.16.4"
+  },
+  "resolutions": {
+    "angular-material": "~1.1.1"
+  }
+}
