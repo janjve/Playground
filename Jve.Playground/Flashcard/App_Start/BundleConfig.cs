@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Optimization;
 
-namespace TfsAdministrationTool_Web
+namespace Flashcard
 {
     // TODO: This should be replaced by grunt bundle + minification for consistensy - Remember to remove web.optimization reference
     public class BundleConfig

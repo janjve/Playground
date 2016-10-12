@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace TfsAdministrationTool_Web.Controllers
+namespace Flashcard.Controllers
 {
     public class WebController : Controller
     {

@@ -5,9 +5,9 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace TfsAdministrationTool_Web.Controllers.API
+namespace Flashcard.Controllers.API
 {
-    public class ProjectController : ApiController
+    public class UserController : ApiController
     {
     }
 }

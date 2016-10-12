@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web.Http;
 using Newtonsoft.Json.Serialization;
 
-namespace TfsAdministrationTool_Web
+namespace Flashcard
 {
     public static class WebApiConfig
     {

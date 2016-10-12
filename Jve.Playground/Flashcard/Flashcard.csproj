@@ -14,7 +14,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TfsAdministrationTool_Web</RootNamespace>
-    <AssemblyName>TfsAdministrationTool-Web</AssemblyName>
+    <AssemblyName>Flashcard</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />

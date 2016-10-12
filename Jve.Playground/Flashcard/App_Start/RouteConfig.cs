@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace TfsAdministrationTool_Web
+namespace Flashcard
 {
     public class RouteConfig
     {
@@ -18,6 +18,7 @@ namespace TfsAdministrationTool_Web
             routes.MapRoute(
                 name: "Default",
                 url: "{*url}",
+                namespaces: new string[] { "Flashcard.Controllers" },
                 defaults: new { controller = "Web", action = "Default" }
             );
         }
