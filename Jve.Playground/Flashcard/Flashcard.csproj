@@ -130,6 +130,8 @@
     <Content Include="wwwroot\app\components\projectDetails\templates\tfsProjectDetailsAdmin.html" />
     <Content Include="wwwroot\app\components\projectDetails\templates\tfsProjectDetailsRead.html" />
     <Content Include="wwwroot\app\components\projectDetails\templates\tfsProjectDetailsLocked.html" />
+    <Content Include="wwwroot\app\components\projects\directives\projectListPickerDialogController.js" />
+    <Content Include="wwwroot\app\components\projects\templates\projectListPickerDialog.html" />
     <Content Include="wwwroot\app\main\mainController.js" />
     <Content Include="wwwroot\app\components\projectDetails\projectDetails.html" />
     <Content Include="wwwroot\app\components\projectDetails\projectDetailsController.js" />
