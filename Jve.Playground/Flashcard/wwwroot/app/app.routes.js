@@ -17,8 +17,8 @@
                 state: 'cards',
                 config: {
                     url: '/cards',
-                    templateUrl: format('{0}/flashcard/flashcardView.html', baseUrl),
-                    controller: 'flashcardController as vm',
+                    templateUrl: format('{0}/flashcard/flashcardMainView.html', baseUrl),
+                    controller: 'flashcardMainController as vm',
                     bindToController: true
                 }
             }
