@@ -7,7 +7,12 @@ using System.Web.Http;
 
 namespace Flashcard.Controllers.API
 {
-    public class UserController : ApiController
+    public class FlashcardController : ApiController
     {
+        [HttpGet]
+        public void GetFlashcards()
+        {
+            
+        }
     }
 }

@@ -5,11 +5,11 @@
         .module('app')
         .directive('flashcard', flashcardDirective);
 
-    flashcardDirective.$inject = [];
+    flashcardDirective.$inject = ['componentBaseUrl'];
     
-    function flashcardDirective() {
+    function flashcardDirective(componentBaseUrl) {
         var directive = {
-            templateUrl: '/wwwroot/app/components/flashcard/directories/flashcardView.html',
+            templateUrl: format('{0}/flashcard/directories/flashcardView.html', componentBaseUrl),
             restrict: 'EA',
             controller: flashcardController,
             controllerAs: 'vm',

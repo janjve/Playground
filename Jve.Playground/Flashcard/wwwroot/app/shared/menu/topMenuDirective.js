@@ -5,15 +5,15 @@
         .module('app')
         .directive('topMenu', topMenuDirective);
 
-    topMenuDirective.$inject = [];
+    topMenuDirective.$inject = ['sharedBaseUrl'];
     
-    function topMenuDirective () {
+    function topMenuDirective(sharedBaseUrl) {
         // Usage:
         //     <topMenuDirective></topMenuDirective>
         // Creates:
         // 
         var directive = {
-            templateUrl: '/wwwroot/app/shared/menu/topMenu.html',
+            templateUrl: format('{0}/menu/topMenu.html', sharedBaseUrl),
             link: link,
             restrict: 'EA',
             controller: topMenuController,
