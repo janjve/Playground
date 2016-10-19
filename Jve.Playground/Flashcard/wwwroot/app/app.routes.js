@@ -7,7 +7,10 @@
     appRun.$inject = ['routerHelper', 'componentBaseUrl'];
 
     function appRun(routerHelper, componentBaseUrl) {
+        // Routing
         routerHelper.configureStates(getStates(componentBaseUrl), 'flashcardMain');
+
+        // Theming
     }
 
     function getStates(baseUrl) {
