@@ -18,7 +18,9 @@
                 front: '@',
                 back: '@',
                 imageUrl: '@',
-                feedback: '&'
+                feedback: '&',
+                reset: '&',
+                flipped: '=?'
             }
         };
         return directive;

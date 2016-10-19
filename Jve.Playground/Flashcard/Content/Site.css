@@ -21,3 +21,7 @@ textarea {
 .highlight {
     font-weight: bold;
 }
+
+.site-navigation-btn {
+    padding-top: 0px;
+}

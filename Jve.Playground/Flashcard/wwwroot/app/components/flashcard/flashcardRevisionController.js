@@ -10,9 +10,12 @@
         var vm = this;
 
         vm.isLoading = false;
-        vm.flashcardCache = [];
+        vm.flashcardCache = [];     // To visit
         vm.flashcard = null;
+        vm.showAnswer = false;
+
         vm.feedback = feedback;
+        vm.nextFlashcard = nextFlashcard;
 
         activate();
 
@@ -35,6 +38,7 @@
 
         function feedback(answer) {
             // Todo: report feedback.
+            vm.showAnswer = false;
             if (_.some(vm.flashcardCache)) {
                 nextFlashcard();
             } else {

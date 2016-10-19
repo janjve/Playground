@@ -1,26 +1,28 @@
 ﻿<div layout="column" layout-align="center none">
     <div layout="row" layout-align="center" layout-padding>
         <div class="md-display-1">
-            Answer, Flip, Evaluate and be Honest.
+            Answer, Flip and Evaluate.
         </div>
     </div>
 
-    <div layout="row" layout-align="center center">
-        <div flex="25" layout="column" layout-align="end stretch">
-            <md-button>
-                <md-icon aria-label="keyboard_arrow_left">keyboard_arrow_left</md-icon>
+    <div layout="row" layout-align="center start">
+        <div flex="25" layout="column" layout-align="end stretch" class="site-navigation-btn">
+            <md-button ng-disabled="vm.flashcardSession">
+                <md-icon aria-label="keyboard_arrow_left">keyboard_arrow_left</md-icon>History
             </md-button>
         </div>
         <div flex="50" ng-show="vm.flashcard">
             <flashcard data-front="{{vm.flashcard.front}}"
                        data-back="{{vm.flashcard.back}}"
-                       data-image-url="Images/placeholder.png"
-                       data-feedback="vm.feedback(answer)"></flashcard>
+                       data-image-url="Images/placeholder-programming.png"
+                       data-feedback="vm.feedback(answer)"
+                       data-flipped="vm.showAnswer"></flashcard>
         </div>
         <div flex="50" ng-hide="vm.flashcard">done</div>
-        <div flex="25" layout="column" layout-align="end stretch">
-            <md-button>
-                <md-icon aria-label="keyboard_arrow_right">keyboard_arrow_right</md-icon>
+
+        <div flex="25" layout="column" layout-align="start stretch" class="site-navigation-btn">
+            <md-button ng-disabled="!vm.flashcard" ng-click="vm.next">
+                Skip card<md-icon aria-label="keyboard_arrow_right">keyboard_arrow_right</md-icon>
             </md-button>
         </div>
     </div>

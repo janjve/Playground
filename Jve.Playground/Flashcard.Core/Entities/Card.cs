@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using AutoMapper;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Flashcard.Models
+namespace Flashcard.Core.Entities
 {
-    public class FlashcardModel
+    public class Card
     {
         public Guid Id { get; set; }
         public string Front { get; set; }
