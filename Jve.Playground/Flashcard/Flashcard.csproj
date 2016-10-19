@@ -116,6 +116,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Doc\Images.md" />
+    <Content Include="Images\placeholder.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="gruntfile.js" />

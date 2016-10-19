@@ -8,8 +8,6 @@
 
     function mainController() {
         var vm = this;
-
-        vm.helloWorld = "Hello from angular!";
     }
 
 })();

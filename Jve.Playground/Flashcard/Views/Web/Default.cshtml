@@ -13,8 +13,9 @@
 </head>
 <body>
     <top-menu ng-cloak></top-menu>
-    <div class="md-padding" layout="row">
-        <div flex-offset="10" flex="80" ui-view ng-cloak class="body-content"></div>
+    <div class="md-padding body-content" layout="row">
+        <md-content ui-view ng-cloak flex="80" flex-offset="10">
+        </md-content>
     </div>
     @Scripts.Render("~/bundles/bower_script")
     @Scripts.Render("~/bundles/app_script")

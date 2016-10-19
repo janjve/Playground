@@ -1,1 +1,15 @@
-﻿Hello flashcardView.
+﻿<div layout="column" layout-align="none">
+    <div layout="row" flex="100">
+        <div flex></div>
+        <a ui-sref="flashcardAdd" ui-sref-active="active"><md-button class="md-primary md-raised">Add card</md-button></a>
+        <a ui-sref="flashcardRevision" ui-sref-active="active"><md-button class="md-primary md-raised pull-right">Start</md-button></a>
+    </div>
+    <br/>
+
+    <div layout="row" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>
+        <md-whiteframe class="md-whiteframe-1dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
+            <div flex="100">Recent flashcards</div>
+        </md-whiteframe>
+    </div>
+
+</div>

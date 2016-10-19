@@ -1,4 +1,28 @@
-﻿<div>
-    <p>Front: {{vm.front}}</p>
-    <p>Back: {{vm.back}}</p>
+﻿<div layout="column" ng-cloak>
+    <md-card>
+        <img ng-src="{{vm.imageUrl}}" class="md-card-image" alt="Washed Out">
+        <!--<md-card-title>
+            <md-card-title-text>
+                <p class="md-headline">Vertical action buttons</p>
+            </md-card-title-text>
+        </md-card-title>-->
+        <md-card-content>
+            <p class="md-body-1">
+                {{vm.front}}
+            </p>
+            <p class="md-body-2" ng-show="vm.flipped">
+               {{vm.back}}
+            </p>
+        </md-card-content>
+        <!--ng-hide="vm.flipped"-->
+        <md-card-actions layout="column" layout-align="start" ng-hide="vm.flipped">
+            <md-button ng-click="vm.flip()">Flip card</md-button>
+        </md-card-actions>
+
+        <md-card-actions layout="column" layout-align="start" ng-show="vm.flipped">
+            <md-button>Obvious</md-button>
+            <md-button>Intermediate</md-button>
+            <md-button>Complicated</md-button>
+        </md-card-actions>
+    </md-card>
 </div>

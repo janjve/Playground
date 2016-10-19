@@ -2,14 +2,14 @@
     'use strict';
 
     angular.module('app')
-        .controller('flashcardMainController', flashcardMainController);
+        .controller('flashcardRevisionController', flashcardRevisionController);
 
-    flashcardMainController.$inject = [];
+    flashcardRevisionController.$inject = [];
 
-    function flashcardMainController() {
+    function flashcardRevisionController() {
         var vm = this;
 
-        vm.helloWorld = "Hello from flashcardMainController!";
+        vm.helloWorld = "Hello from flashcardRevisionController!";
     }
 
 })();

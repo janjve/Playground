@@ -16,7 +16,8 @@
             bindToController: true,
             scope: {
                 front: '@',
-                back: '@'
+                back: '@',
+                imageUrl: '@'
             }
         };
         return directive;
@@ -27,6 +28,14 @@
     function flashcardController() {
         var vm = this;
 
+        vm.flipped = false;
+        vm.flip = flip;
+        
+        ///////////////////////
+
+        function flip() {
+            vm.flipped = !vm.flipped;
+        }
     }
 
 })();
