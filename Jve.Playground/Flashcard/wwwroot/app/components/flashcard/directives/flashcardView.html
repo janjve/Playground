@@ -20,9 +20,9 @@
         </md-card-actions>
 
         <md-card-actions layout="column" layout-align="start" ng-show="vm.flipped">
-            <md-button>Obvious</md-button>
-            <md-button>Intermediate</md-button>
-            <md-button>Difficult</md-button>
+            <md-button ng-click="vm.feedback({answer: 1})">Obvious</md-button>
+            <md-button ng-click="vm.feedback({answer: 2})">Intermediate</md-button>
+            <md-button ng-click="vm.feedback({answer: 3})">Difficult</md-button>
         </md-card-actions>
     </md-card>
 </div>

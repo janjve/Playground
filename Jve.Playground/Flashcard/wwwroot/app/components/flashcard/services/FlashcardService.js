@@ -4,19 +4,19 @@
     angular.module('app')
         .service('flashcardService', flashcardService);
 
-    flashcardService.$inject = ['apiBaseUrl'];
+    flashcardService.$inject = ['$http', 'apiBaseUrl'];
 
     function flashcardService($http, apiBaseUrl) {
         var service = {
-            GetFlashcardBatch: GetFlashcardBatch
+            getFlashcardBatch: getFlashcardBatch
         };
 
         return service;
 
         //////////////
 
-        function getFlashcards() {
-            return $http.get(format('{0}/GetFlashcardBatch', apiBaseUrl))
+        function getFlashcardBatch() {
+            return $http.get(format('{0}/Flashcard/GetBatch', apiBaseUrl))
                 .then(onComplete);
 
             function onComplete(response) {

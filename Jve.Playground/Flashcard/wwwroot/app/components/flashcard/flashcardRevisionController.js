@@ -10,8 +10,9 @@
         var vm = this;
 
         vm.isLoading = false;
-        vm.flashCardCache = [];
+        vm.flashcardCache = [];
         vm.flashcard = null;
+        vm.feedback = feedback;
 
         activate();
 
@@ -19,11 +20,13 @@
         
         function activate() {
             vm.isLoading = true;
-            flashcardService.GetFlashcardBatch().then(function (result) {
+            flashcardService.getFlashcardBatch().then(function (result) {
                 if (_.some(result)) {
-                    vm.flashCard = result;
+                    vm.flashcardCache = result;
                     nextFlashcard();
                 } else {
+                    vm.flashcardCache = [];
+                    vm.flashcard = null;
                     // Recently answered all cards.
                 }
                 vm.isLoading = false;
@@ -31,9 +34,8 @@
         }
 
         function feedback(answer) {
-            alert('callback with answer:' + answer);
             // Todo: report feedback.
-            if (_.some(vm.flashCardCache)) {
+            if (_.some(vm.flashcardCache)) {
                 nextFlashcard();
             } else {
                 // Empty cache, get new batch.
@@ -42,8 +44,8 @@
         }
 
         function nextFlashcard() {
-            vm.flashCard = _.head(flashCardCache);
-            vm.flashCardCache = _.tail(flashCardCache);
+            vm.flashcard = _.head(vm.flashcardCache);
+            vm.flashcardCache = _.tail(vm.flashcardCache);
         }
     }
 

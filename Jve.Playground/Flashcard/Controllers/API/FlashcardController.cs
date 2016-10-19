@@ -11,7 +11,7 @@ namespace Flashcard.Controllers.API
     public class FlashcardController : ApiController
     {
         [HttpGet]
-        public IList<FlashcardModel> GetFlashcardBatch()
+        public IList<FlashcardModel> GetBatch()
         {
             // dummy
             return new List<FlashcardModel>

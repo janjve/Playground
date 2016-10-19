@@ -15,10 +15,10 @@
             controllerAs: 'vm',
             bindToController: true,
             scope: {
-                front: '=',
-                back: '=',
-                imageUrl: '=',
-                onAnswer: '@'
+                front: '@',
+                back: '@',
+                imageUrl: '@',
+                feedback: '&'
             }
         };
         return directive;

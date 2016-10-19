@@ -9,8 +9,7 @@
     "angular-ui-router": "~0.2.15",
     "angular-material": "~1.1.1",
     "format": "~1.0.1",
-    "lodash": "~4.16.4",
-    "material-design-icons": "~3.0.1"
+    "lodash": "~4.16.4"
   },
   "resolutions": {
     "angular-material": "~1.1.1"
