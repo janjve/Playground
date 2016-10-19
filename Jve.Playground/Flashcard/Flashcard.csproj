@@ -127,8 +127,8 @@
     <Content Include="wwwroot\app\app.constants.js" />
     <Content Include="wwwroot\app\app.module.js" />
     <Content Include="wwwroot\app\app.routes.js" />
-    <Content Include="wwwroot\app\components\flashcard\directories\flashcardView.html" />
-    <Content Include="wwwroot\app\components\flashcard\directories\flashcardController.js" />
+    <Content Include="wwwroot\app\components\flashcard\directives\flashcardView.html" />
+    <Content Include="wwwroot\app\components\flashcard\directives\flashcardController.js" />
     <Content Include="wwwroot\app\components\flashcard\flashcardAddController.js" />
     <Content Include="wwwroot\app\components\flashcard\flashcardAddView.html" />
     <Content Include="wwwroot\app\components\flashcard\flashcardRevisionView.html" />

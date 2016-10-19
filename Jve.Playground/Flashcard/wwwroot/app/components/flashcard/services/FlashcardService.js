@@ -8,7 +8,7 @@
 
     function flashcardService($http, apiBaseUrl) {
         var service = {
-            getFlashcards: getFlashcards
+            GetFlashcardBatch: GetFlashcardBatch
         };
 
         return service;
@@ -16,7 +16,7 @@
         //////////////
 
         function getFlashcards() {
-            return $http.get(format('{0}/GetFlashcards', apiBaseUrl))
+            return $http.get(format('{0}/GetFlashcardBatch', apiBaseUrl))
                 .then(onComplete);
 
             function onComplete(response) {

@@ -9,15 +9,16 @@
     
     function flashcardDirective(componentBaseUrl) {
         var directive = {
-            templateUrl: format('{0}/flashcard/directories/flashcardView.html', componentBaseUrl),
+            templateUrl: format('{0}/flashcard/directives/flashcardView.html', componentBaseUrl),
             restrict: 'EA',
             controller: flashcardController,
             controllerAs: 'vm',
             bindToController: true,
             scope: {
-                front: '@',
-                back: '@',
-                imageUrl: '@'
+                front: '=',
+                back: '=',
+                imageUrl: '=',
+                onAnswer: '@'
             }
         };
         return directive;

@@ -10,7 +10,7 @@
             <p class="md-body-1">
                 {{vm.front}}
             </p>
-            <p class="md-body-2" ng-show="vm.flipped">
+            <p class="md-body-1 highlight" ng-show="vm.flipped">
                {{vm.back}}
             </p>
         </md-card-content>
@@ -22,7 +22,7 @@
         <md-card-actions layout="column" layout-align="start" ng-show="vm.flipped">
             <md-button>Obvious</md-button>
             <md-button>Intermediate</md-button>
-            <md-button>Complicated</md-button>
+            <md-button>Difficult</md-button>
         </md-card-actions>
     </md-card>
 </div>
