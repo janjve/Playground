@@ -26,29 +26,15 @@
                 Flashcards
             </md-subheader>
         </md-list>
-        <md-divider></md-divider>
-        <md-list-item>
-            <div layout="column" layout-align="center start">
-                <span class="md-body-1">Front: aaa aaa aaa</span>
-                <span ng-hide="vm.showAnswer" class="md-caption">&zwnj;</span>
-                <span ng-show="vm.showAnswer" class="md-caption">Back: bbb bbb bbb</span>
-            </div>
-        </md-list-item>
-        <md-divider></md-divider>
-        <md-list-item>
-            <div layout="column" layout-align="center start">
-                <span class="md-body-1">Front: ccc ccc ccc</span>
-                <span ng-hide="vm.showAnswer" class="md-caption">&zwnj;</span>
-                <span ng-show="vm.showAnswer" class="md-caption">Back: ddd ddd ddd</span>
-            </div>
-        </md-list-item>
-        <md-divider></md-divider>
-        <md-list-item>
-            <div layout="column" layout-align="center start">
-                <span class="md-body-1">Front: eee eee eee</span>
-                <span ng-hide="vm.showAnswer" class="md-caption">&zwnj;</span>
-                <span ng-show="vm.showAnswer" class="md-caption">Back: fff fff fff</span>
-            </div>
-        </md-list-item>
+        <div ng-repeat="flashcard in vm.flashcards | orderBy: flashcard.order">
+            <md-divider></md-divider>
+            <md-list-item>
+                <div layout="column" layout-align="center start">
+                    <span class="md-body-1">{{flashcard.front}}</span>
+                    <span ng-hide="vm.showAnswer" class="md-caption">&zwnj;</span>
+                    <span ng-show="vm.showAnswer" class="md-caption">: {{flashcard.back}}</span>
+                </div>
+            </md-list-item>
+        </div>
     </md-whiteframe>
 </div>

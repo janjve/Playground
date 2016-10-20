@@ -9,7 +9,7 @@
     function flashcardService($http, apiBaseUrl) {
         var service = {
             getFlashcardBatch: getFlashcardBatch,
-            getFlashcardList: getFlashcardList
+            getAllFlashcards: getAllFlashcards
         };
 
         return service;
@@ -25,7 +25,7 @@
             }
         }
 
-        function getFlashcardList() {
+        function getAllFlashcards() {
             return $http.get(format('{0}/Flashcard/GetAll', apiBaseUrl))
                 .then(onComplete);
 

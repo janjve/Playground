@@ -11,13 +11,16 @@
 
         vm.showAnswer = false;
         vm.toggleShowAnswer = toggleShowAnswer;
+        vm.flashcards = [];
 
         activate();
 
         ///////////////////////
 
         function activate() {
-            //flashcardService.get
+            flashcardService.getAllFlashcards().then(function (result) {
+                vm.flashcards = result;
+            });
         }
 
         function toggleShowAnswer() {
