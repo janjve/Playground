@@ -54,5 +54,10 @@ namespace Flashcard.Core.DataAccess
                 },
             };
         }
+
+        public void SaveCard(Card card)
+        {
+            // Save
+        }
     }
 }

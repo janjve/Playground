@@ -16,6 +16,12 @@ namespace Flashcard
             {
                 cfg.CreateMap<Card, FlashcardModel>();
                 cfg.CreateMap<Card, DetailedFlashcardModel>();
+                cfg.CreateMap<CreateCardModel, Card>().AfterMap((src, dest) =>
+                {
+                    dest.Priority = 3;
+                    dest.createdAt = DateTime.Now;
+                    dest.Id = src.Id ?? Guid.NewGuid();
+                });
             });
         }
     }

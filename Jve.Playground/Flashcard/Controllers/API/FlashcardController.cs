@@ -37,5 +37,13 @@ namespace Flashcard.Controllers.API
                 .ToList();
         }
 
+        [HttpPost]
+        public DetailedFlashcardModel CreateCard([FromBody] CreateCardModel model)
+        {
+            var entity = Mapper.Map<CreateCardModel, Card>(model);
+            _flashcardService.SaveCard(entity);
+            return Mapper.Map<Card, DetailedFlashcardModel>(entity);
+        }
+
     }
 }

@@ -173,6 +173,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CreateCardModel.cs" />
     <Compile Include="Models\DetailedFlashcardModel.cs" />
     <Compile Include="Models\FlashcardModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
