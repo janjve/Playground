@@ -1,15 +1,54 @@
-﻿<div layout="column" layout-align="none">
-    <div layout="row" flex="100">
-        <div flex></div>
-        <a ui-sref="flashcardAdd" ui-sref-active="active"><md-button class="md-primary md-raised">Add card</md-button></a>
-        <a ui-sref="flashcardRevision" ui-sref-active="active"><md-button class="md-primary md-raised pull-right">Start</md-button></a>
-    </div>
-    <br/>
-
-    <div layout="row" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>
-        <md-whiteframe class="md-whiteframe-1dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
-            <div flex="100">Recent flashcards</div>
-        </md-whiteframe>
-    </div>
-
+﻿<div layout="column" layout-align="center none" layout-padding layout-fill>
+    <md-whiteframe layout="row" class="md-whiteframe-1dp" layout-align="space-between stretch" flex="100">
+        <div class="site-right-btn-group">
+            <md-button ng-click="vm.toggleShowAnswer()">
+                <md-icon ng-hide="vm.showAnswer" aria-label="visibility">visibility</md-icon>
+                <md-icon ng-show="vm.showAnswer" aria-label="visibility_off">visibility_off</md-icon>
+            </md-button>
+            <md-button>
+                <md-icon aria-label="add">add</md-icon>
+            </md-button>
+            <md-button>
+                <md-icon aria-label="delete">delete</md-icon>
+            </md-button>
+        </div>
+        <div class="site-filler"></div>
+        <div class="right">
+            <md-button>
+                Revise<md-icon aria-label="keyboard_arrow_right">keyboard_arrow_right</md-icon>
+            </md-button>
+        </div>
+    </md-whiteframe>
+    <div md-margin></div>
+    <md-whiteframe class="md-whiteframe-1dp" layout-align="center center" flex="100">
+        <md-list>
+            <md-subheader>
+                Flashcards
+            </md-subheader>
+        </md-list>
+        <md-divider></md-divider>
+        <md-list-item>
+            <div layout="column" layout-align="center start">
+                <span class="md-body-1">Front: aaa aaa aaa</span>
+                <span ng-hide="vm.showAnswer" class="md-caption">&zwnj;</span>
+                <span ng-show="vm.showAnswer" class="md-caption">Back: bbb bbb bbb</span>
+            </div>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item>
+            <div layout="column" layout-align="center start">
+                <span class="md-body-1">Front: ccc ccc ccc</span>
+                <span ng-hide="vm.showAnswer" class="md-caption">&zwnj;</span>
+                <span ng-show="vm.showAnswer" class="md-caption">Back: ddd ddd ddd</span>
+            </div>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item>
+            <div layout="column" layout-align="center start">
+                <span class="md-body-1">Front: eee eee eee</span>
+                <span ng-hide="vm.showAnswer" class="md-caption">&zwnj;</span>
+                <span ng-show="vm.showAnswer" class="md-caption">Back: fff fff fff</span>
+            </div>
+        </md-list-item>
+    </md-whiteframe>
 </div>

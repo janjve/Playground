@@ -4,12 +4,25 @@
     angular.module('app')
         .controller('flashcardMainController', flashcardMainController);
 
-    flashcardMainController.$inject = [];
+    flashcardMainController.$inject = ['flashcardService'];
 
-    function flashcardMainController() {
+    function flashcardMainController(flashcardService) {
         var vm = this;
 
-        vm.helloWorld = "Hello from flashcardMainController!";
+        vm.showAnswer = false;
+        vm.toggleShowAnswer = toggleShowAnswer;
+
+        activate();
+
+        ///////////////////////
+
+        function activate() {
+            //flashcardService.get
+        }
+
+        function toggleShowAnswer() {
+            vm.showAnswer = !vm.showAnswer;
+        }
     }
 
 })();
