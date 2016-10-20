@@ -1,0 +1,32 @@
+namespace Flashcard.Core.Migrations
+{
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
+
+    internal sealed class Configuration : DbMigrationsConfiguration<Flashcard.Core.Entities.FlashcardContext>
+    {
+        public Configuration()
+        {
+            AutomaticMigrationsEnabled = false;
+            ContextKey = "Flashcard.Core.Entities.FlashcardContext";
+        }
+
+        protected override void Seed(Flashcard.Core.Entities.FlashcardContext context)
+        {
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
+        }
+    }
+}
