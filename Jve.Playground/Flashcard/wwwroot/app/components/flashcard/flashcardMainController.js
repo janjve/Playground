@@ -4,14 +4,15 @@
     angular.module('app')
         .controller('flashcardMainController', flashcardMainController);
 
-    flashcardMainController.$inject = ['flashcardService'];
+    flashcardMainController.$inject = ['flashcardService', '$state'];
 
-    function flashcardMainController(flashcardService) {
+    function flashcardMainController(flashcardService, $state) {
         var vm = this;
 
         vm.showAnswer = false;
         vm.toggleShowAnswer = toggleShowAnswer;
         vm.flashcards = [];
+        vm.navigate = $state.go;
 
         activate();
 

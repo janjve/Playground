@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace Flashcard.Core.Entities
+namespace Flashcard.Models
 {
-    public class Card
+    public class DetailedFlashcardModel
     {
         public Guid Id { get; set; }
         public string Front { get; set; }
         public string Back { get; set; }
         public int Priority { get; set; }
+        public DateTime CreatedAt { get; set; }
 
-        public DateTime createdAt { get; set; }
     }
 }

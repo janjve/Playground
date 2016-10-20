@@ -29,11 +29,11 @@ namespace Flashcard.Controllers.API
         }
 
         [HttpGet]
-        public IList<FlashcardModel> GetAll()
+        public IList<DetailedFlashcardModel> GetAll()
         {
             return _flashcardService
                 .GetAll()
-                .Select(Mapper.Map<Card, FlashcardModel>)
+                .Select(Mapper.Map<Card, DetailedFlashcardModel>)
                 .ToList();
         }
 

@@ -4,9 +4,9 @@
     angular.module('app')
         .controller('flashcardRevisionController', flashcardRevisionController);
 
-    flashcardRevisionController.$inject = ['flashcardService'];
+    flashcardRevisionController.$inject = ['flashcardService', '$state'];
 
-    function flashcardRevisionController(flashcardService) {
+    function flashcardRevisionController(flashcardService, $state) {
         var vm = this;
 
         vm.isLoading = false;
@@ -16,6 +16,7 @@
 
         vm.feedback = feedback;
         vm.nextFlashcard = nextFlashcard;
+        vm.navigate = $state.go;
 
         activate();
 
@@ -38,6 +39,7 @@
 
         function feedback(answer) {
             // Todo: report feedback.
+
             vm.showAnswer = false;
             if (_.some(vm.flashcardCache)) {
                 nextFlashcard();

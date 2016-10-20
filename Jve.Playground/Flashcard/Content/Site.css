@@ -25,3 +25,8 @@ textarea {
 .site-navigation-btn {
     padding-top: 0px;
 }
+
+a.site-state-link {
+    color: inherit;
+    text-decoration: inherit;
+}

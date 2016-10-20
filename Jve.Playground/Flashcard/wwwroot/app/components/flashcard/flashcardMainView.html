@@ -5,7 +5,7 @@
                 <md-icon ng-hide="vm.showAnswer" aria-label="visibility">visibility</md-icon>
                 <md-icon ng-show="vm.showAnswer" aria-label="visibility_off">visibility_off</md-icon>
             </md-button>
-            <md-button>
+            <md-button ng-click="vm.navigate('flashcardAdd')">
                 <md-icon aria-label="add">add</md-icon>
             </md-button>
             <md-button>
@@ -14,7 +14,7 @@
         </div>
         <div class="site-filler"></div>
         <div class="right">
-            <md-button>
+            <md-button ng-click="vm.navigate('flashcardRevision')">
                 Revise<md-icon aria-label="keyboard_arrow_right">keyboard_arrow_right</md-icon>
             </md-button>
         </div>
@@ -26,11 +26,11 @@
                 Flashcards
             </md-subheader>
         </md-list>
-        <div ng-repeat="flashcard in vm.flashcards | orderBy: flashcard.order">
+        <div ng-repeat="flashcard in vm.flashcards | orderBy: flashcard.createdAt">
             <md-divider></md-divider>
             <md-list-item>
                 <div layout="column" layout-align="center start">
-                    <span class="md-body-1">{{flashcard.front}}</span>
+                    <span class="md-body-1">{{flashcard.front}} {{flashcard.createdAt | amDateFormat:'(YYYY-MM-DD)'}}</span>
                     <span ng-hide="vm.showAnswer" class="md-caption">&zwnj;</span>
                     <span ng-show="vm.showAnswer" class="md-caption">: {{flashcard.back}}</span>
                 </div>

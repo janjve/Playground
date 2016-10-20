@@ -12,7 +12,11 @@ namespace Flashcard
     {
         public static void InitializeMappers()
         {
-            Mapper.Initialize(cfg => cfg.CreateMap<Card, FlashcardModel>());
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<Card, FlashcardModel>();
+                cfg.CreateMap<Card, DetailedFlashcardModel>();
+            });
         }
     }
 }

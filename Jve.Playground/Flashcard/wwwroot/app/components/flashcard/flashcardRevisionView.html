@@ -1,13 +1,7 @@
 ﻿<div layout="column" layout-align="center none">
-    <div layout="row" layout-align="center" layout-padding>
-        <div class="md-display-1">
-            Answer, Flip and Evaluate.
-        </div>
-    </div>
-
     <div layout="row" layout-align="center start">
         <div flex="25" layout="column" layout-align="end stretch" class="site-navigation-btn">
-            <md-button ng-disabled="vm.flashcardSession">
+            <md-button ng-disabled="vm.flashcardSession" ng-click="vm.navigate('flashcardMain')">
                 <md-icon aria-label="keyboard_arrow_left">keyboard_arrow_left</md-icon>History
             </md-button>
         </div>
@@ -21,7 +15,7 @@
         <div flex="50" ng-hide="vm.flashcard">done</div>
 
         <div flex="25" layout="column" layout-align="start stretch" class="site-navigation-btn">
-            <md-button ng-disabled="!vm.flashcard" ng-click="vm.next">
+            <md-button ng-disabled="!vm.flashcard" ng-click="vm.feedback(-1)">
                 Skip card<md-icon aria-label="keyboard_arrow_right">keyboard_arrow_right</md-icon>
             </md-button>
         </div>

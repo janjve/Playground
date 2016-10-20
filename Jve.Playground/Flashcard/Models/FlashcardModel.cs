@@ -11,6 +11,6 @@ namespace Flashcard.Models
         public Guid Id { get; set; }
         public string Front { get; set; }
         public string Back { get; set; }
-        public int Order { get; set; }
+        public int Priority { get; set; }
     }
 }
