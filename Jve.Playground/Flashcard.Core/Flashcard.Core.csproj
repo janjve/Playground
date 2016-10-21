@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\FlashcardDummyService.cs" />
+    <Compile Include="DataAccess\FlashcardService.cs" />
     <Compile Include="DataAccess\IFlashcardService.cs" />
     <Compile Include="Entities\Card.cs" />
     <Compile Include="Entities\FlashcardContext.cs" />
