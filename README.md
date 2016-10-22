@@ -1,2 +1,4 @@
 # Playground
-ITU stuff mostly
+- Algorithm design
+- Flashcard site
+- ... :+1:
