@@ -42,6 +42,13 @@
   <ItemGroup>
     <Compile Include="Alignment\Alignment.cs" />
     <Compile Include="Alignment\StepAlignmentConfiguration.cs" />
+    <Compile Include="ExpressionTree\Constraint.cs" />
+    <Compile Include="ExpressionTree\Expression.cs" />
+    <Compile Include="ExpressionTree\Literal.cs" />
+    <Compile Include="ExpressionTree\Node.cs" />
+    <Compile Include="ExpressionTree\Operation.cs" />
+    <Compile Include="ExpressionTree\OperatorGT.cs" />
+    <Compile Include="ExpressionTree\Option.cs" />
     <Compile Include="NetworkFlow\DataStructures\Edge.cs" />
     <Compile Include="NetworkFlow\DataStructures\Graph.cs" />
     <Compile Include="NetworkFlow\DataStructures\IGraph.cs" />
