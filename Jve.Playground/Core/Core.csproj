@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{194CF03B-E8A4-4519-85CC-07FA3AC73B55}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Core</RootNamespace>
     <AssemblyName>Core</AssemblyName>
@@ -29,8 +29,23 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Akka, Version=1.1.2.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Akka.1.1.2\lib\net45\Akka.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.36.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.1.36\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,12 +64,24 @@
     <Compile Include="ExpressionTree\Operation.cs" />
     <Compile Include="ExpressionTree\OperatorGT.cs" />
     <Compile Include="ExpressionTree\Option.cs" />
+    <Compile Include="MessagePassing\ClerkActor.cs" />
+    <Compile Include="MessagePassing\BankActor.cs" />
+    <Compile Include="MessagePassing\AccountActor.cs" />
+    <Compile Include="MessagePassing\MainActor.cs" />
+    <Compile Include="MessagePassing\Messages\DepositMessage.cs" />
+    <Compile Include="MessagePassing\Messages\PrintBalanceMessage.cs" />
+    <Compile Include="MessagePassing\Messages\StartTransferMessage.cs" />
+    <Compile Include="MessagePassing\Messages\TransferMessage.cs" />
     <Compile Include="NetworkFlow\DataStructures\Edge.cs" />
     <Compile Include="NetworkFlow\DataStructures\Graph.cs" />
     <Compile Include="NetworkFlow\DataStructures\IGraph.cs" />
     <Compile Include="NetworkFlow\NetworkFlow.cs" />
     <Compile Include="NetworkFlow\NetworkFlowSummary.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
